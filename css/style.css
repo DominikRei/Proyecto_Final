@@ -84,9 +84,6 @@ ul li a {
     align-items: center;
     justify-content: space-evenly;
 }
-.media {
-
-}
 .about_text {
     text-align: justify;
     margin: 16px;
@@ -96,9 +93,6 @@ ul li a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-.descripcion_video {
-
 }
 .descripcion_text {
     text-align: justify;
