@@ -1,0 +1,51 @@
+.centro {
+    grid-area: main;
+}
+.carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: stretch;
+}
+.elemento {
+    flex: 1 0 auto;
+    margin: 0;
+    background-color: aliceblue;
+    width: 700px;
+    height: 400px;
+}
+.subtitle {
+    font-family:'Lora', serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 16px;
+    margin: 16px;
+
+}
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about_text {
+    text-align: justify;
+    margin: 16px;
+    padding: 16px;
+}
+.descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.descripcion_text {
+    text-align: justify;
+    margin: 16px;
+    padding: 16px;
+}
+.subtitle2 {
+    font-family:'Lora', serif;
+    font-size: 34px;
+    text-align: center;
+    padding: 16px;
+    margin: 16px;
+}
