@@ -1,4 +1,13 @@
+//Reset
+@import './reset/reset';
+@import "./reset/vars";
+@import './reset/grid';
+
+//Layout
+
 @import './cabeza';
 @import './centro';
 @import './pie';
 
+//Media queries
+@import './reset/mq'

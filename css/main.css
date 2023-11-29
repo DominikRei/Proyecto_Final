@@ -1,3 +1,25 @@
+* {
+  font-family: "Edu+TAS+Beginner", serif;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.primaria {
+  background: rgb(221, 116, 249);
+  background: linear-gradient(180deg, rgb(221, 116, 249) 0%, rgb(192, 212, 235) 25%, rgba(142, 148, 244, 0.9332107843) 50%, rgb(192, 212, 235) 75%, rgb(221, 116, 249) 100%);
+}
+
+/*GRILLA */
+.grid_container {
+  display: grid;
+  grid-template-columns: 500px 840px;
+  grid-template-rows: 250px auto 250px;
+  grid-template-areas: " header header " " main main " " footer footer";
+}
+
 .inicio {
   grid-area: header;
 }
@@ -102,6 +124,283 @@ ul li a {
   width: 100px;
   height: 100px;
   text-align: right;
+}
+
+/*Media Queries de Desktop a Mobile*/
+/*Medida minimo-maximo especifico */
+/*Desktop*/
+/*Tablet*/
+@media (max-width: 767px) and (min-width: 420px) {
+  * {
+    font-family: "Edu+TAS+Beginner", serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  .primaria {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(158, 82, 179) 50%, rgb(252, 70, 107) 100%);
+  }
+  /* Grilla */
+  .grid_container {
+    grid-template-columns: 650px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: " header" " main" " footer";
+  }
+  .inicio {
+    grid-area: header;
+  }
+  .inicio__2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .inicio__2__imagen {
+    width: 50px;
+    height: 50px;
+  }
+  .inicio__2__title {
+    font-family: "Lora", serif;
+    font-size: 3em;
+    text-align: center;
+  }
+  .inicio__navegacion {
+    text-align: center;
+    font-size: 1em;
+    font-family: "Lora", serif;
+  }
+  ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 12px;
+    margin: 12px;
+    font-weight: 900;
+    font-size: 1em;
+  }
+  ul li a {
+    text-decoration: none;
+  }
+  .centro {
+    grid-area: main;
+  }
+  .centro__subtitle {
+    font-family: "Lora", serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 12px;
+    margin: 12px;
+  }
+  .centro__subtitle2 {
+    font-family: "Lora", serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 12px;
+    margin: 12px;
+  }
+  .centro__descripcion {
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .centro__descripcion__video {
+    background-size: center;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__descripcion__text {
+    text-align: justify;
+    margin: 12px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: stretch;
+  }
+  .centro__carrusel__elemento {
+    flex: 1 0 auto;
+    margin: 0;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__about {
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .centro__about__media {
+    width: 100%;
+    height: 100%;
+  }
+  .centro__about__text {
+    text-align: justify;
+    padding: 12px;
+    margin: 12px;
+  }
+  .pie {
+    grid-area: footer;
+  }
+  .pie__navegacion2 {
+    text-align: center;
+    font-size: 12px;
+    font-family: "Lora", serif;
+  }
+  .pie__2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .pie__2__item {
+    width: 50px;
+    height: 50px;
+    text-align: right;
+  }
+}
+/*Mobile*/
+@media (max-width: 419px) and (min-width: 320px) {
+  * {
+    font-family: "Edu+TAS+Beginner", serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  .primaria {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(188, 122, 190) 49%, rgba(253, 45, 175, 0.3337710084) 100%);
+  }
+  /* Grilla */
+  .grid_container {
+    grid-template-columns: 350px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: " header" " main" " footer";
+  }
+  .inicio {
+    grid-area: header;
+  }
+  .inicio__2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .inicio__2__imagen {
+    width: 50px;
+    height: 50px;
+  }
+  .inicio__2__title {
+    font-family: "Lora", serif;
+    font-size: 3em;
+    text-align: center;
+  }
+  .inicio__navegacion {
+    text-align: center;
+    font-size: 1em;
+    font-family: "Lora", serif;
+  }
+  ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 900;
+    font-size: 1em;
+  }
+  ul li a {
+    text-decoration: none;
+  }
+  .centro {
+    grid-area: main;
+  }
+  .centro__subtitle {
+    font-family: "Lora", serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  .centro__subtitle2 {
+    font-family: "Lora", serif;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  .centro__descripcion {
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .centro__descripcion__video {
+    background-size: center;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__descripcion__text {
+    text-align: justify;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: stretch;
+  }
+  .centro__carrusel__elemento {
+    flex: 1 0 auto;
+    margin: 0;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+  }
+  .centro__about {
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .centro__about__media {
+    width: 100%;
+    height: 100%;
+  }
+  .centro__about__text {
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+  }
+  .pie {
+    grid-area: footer;
+  }
+  .pie__2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .pie__2__item {
+    width: 50px;
+    height: 50px;
+    text-align: right;
+  }
+  .pie__navegacion2 {
+    text-align: center;
+    font-size: 1em;
+    font-family: "Lora", serif;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
