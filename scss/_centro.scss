@@ -2,28 +2,21 @@
     grid-area: main;
 
     &__subtitle {
-        font-family:'Lora', serif;
+        @include text-font-family;
         font-size: 2em;
-        text-align: center;
-        padding: 16px;
-        margin: 16px;
+        @include p-m (16px, 16px);
     }
     &__subtitle2 {
-        font-family:'Lora', serif;
+        @include text-font-family;
         font-size: 34px;
-        text-align: center;
-        padding: 16px;
-        margin: 16px;
+        @include p-m (16px, 16px)
     }
     &__descripcion {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include display-align-justify;
 
         &__text {
             text-align: justify;
-            margin: 16px;
-            padding: 16px;
+            @include p-m (16px, 16px)
         }
     }
     &__carrusel {
@@ -41,14 +34,11 @@
         }
     }
     &__about {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include display-align-justify;
 
         &__text {
             text-align: justify;
-            margin: 16px;
-            padding: 16px;
+            @include p-m (16px, 16px)
         }
     }
 }

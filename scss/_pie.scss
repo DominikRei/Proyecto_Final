@@ -2,17 +2,14 @@
     grid-area: footer;
 
     &__navegacion2 {
-        text-align: center;
-        font-size: 24px;font-family:'Lora', serif;
+        @include text-font-family;
+        font-size: 24px;
     }
     &__2 {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include display-align-justify;
 
         &__item {
-            width: 100px;
-            height: 100px;
+            @include width-height;
             text-align: right;
         }
     }
