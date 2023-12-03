@@ -20,12 +20,12 @@
     }
     /* Grilla */
     .grid_container {
-        grid-template-columns: 650px;
+        grid-template-columns:20px 560px 20px;
         grid-template-rows:auto auto auto ;
         grid-template-areas: 
-        " header"
-        " main"   
-        " footer";
+        " header header header"
+        " main main main"   
+        "footer footer footer";
     }
     .inicio {
         grid-area: header;
@@ -35,7 +35,7 @@
             width: 100%;
 
             &__imagen {
-                @include w-h (50px, 50px)
+                @include w-h (100px, 100px)
             }
             &__title {
                 @include text-font-family;
@@ -78,10 +78,15 @@
             &__video{
                 background-size: center;
                 @include w-h (100%, 100%);
+                @include p-m (10px, 10px);
+            }
+            &__media {
+                @include p-m (12px, 12px);
+                @include w-h (100%,400px );
             }
             &__text {
                 text-align: justify;
-                @include p-m (12px, 12px);
+                @include p-m (10px, 10px);
                 @include w-h (100%, 100%);
             }
         }
@@ -93,9 +98,9 @@
 
             &__elemento {
                 flex: 1 0 auto;
-                margin: 0;
+                margin: 20px;
                 background-color: aliceblue;
-                @include w-h (100%, 100%);
+                @include w-h ( 480px, 100%);
             }
         }
         &__about {
@@ -121,10 +126,12 @@
         &__2 {
             @include display-align-justify;
             width: 100%;
+            @include p-m (12px, 12px);
 
             &__item {
-                @include w-h (50px, 50px);
+                @include w-h (100px, 100px);
                 text-align: right;
+                margin-right: 15px;
             }
         }  
     } 
@@ -145,12 +152,12 @@
     }
     /* Grilla */
     .grid_container {
-        grid-template-columns: 350px;
+        grid-template-columns: 5px 350px 5px ;
         grid-template-rows:auto auto auto ;
         grid-template-areas: 
-        " header"
-        " main"   
-        " footer";
+        "header header header"
+        "main main main"   
+        "footer footer footer";
     }
     .inicio {
         grid-area: header;
@@ -203,6 +210,11 @@
             &__video{
                 background-size: center;
                 @include w-h (100%, 100%);
+                @include p-m (10px, 10px);
+            }
+            &__media {
+                @include p-m (12px, 12px);
+                @include w-h (100%,400px );
             }
             &__text {
                 text-align: justify;
@@ -242,10 +254,12 @@
         &__2 {
             @include display-align-justify;
             width: 100%;
+            @include p-m (12px, 12px);
 
             &__item {
-                @include w-h (40px, 40px);
+                @include w-h (100px, 100px);
                 text-align: right;
+                margin-right: 15px;
             }
         }
         &__navegacion2 {
