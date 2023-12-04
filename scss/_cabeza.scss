@@ -19,13 +19,13 @@
         font-size: 24px;
     }
 }
-ul li {
-    list-style: none;
-    display: inline-block;
-    @include p-m (16px, 16px);
-    font-weight: 900;
-    font-size: 1em;
-}
-ul li a { 
-    text-decoration: none; 
-}
+// ul li {
+//     list-style: none;
+//     display: inline-block;
+//     @include p-m (16px, 16px);
+//     font-weight: 900;
+//     font-size: 1em;
+// }
+// ul li a { 
+//     text-decoration: none; 
+// }

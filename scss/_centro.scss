@@ -35,20 +35,20 @@
             @include p-m (16px, 16px)
         }
     }
-    &__carrusel {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: scroll;
-        justify-content: stretch;
+    // &__carrusel {
+    //     display: flex;
+    //     flex-wrap: nowrap;
+    //     overflow: scroll;
+    //     justify-content: stretch;
 
-        &__elemento {
-            flex: 1 0 auto;
-            margin: 0;
-            background-color: aliceblue;
-            width: 700px;
-            height: 400px;
-        }
-    }
+    //     &__elemento {
+    //         flex: 1 0 auto;
+    //         margin: 0;
+    //         background-color: aliceblue;
+    //         width: 700px;
+    //         height: 400px;
+    //     }
+    // }
     &__about {
         @include display-align-justify;
 

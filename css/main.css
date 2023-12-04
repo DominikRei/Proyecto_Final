@@ -43,19 +43,6 @@
   font-size: 24px;
 }
 
-ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 16px;
-  margin: 16px;
-  font-weight: 900;
-  font-size: 1em;
-}
-
-ul li a {
-  text-decoration: none;
-}
-
 .centro {
   grid-area: main;
 }
@@ -97,19 +84,6 @@ ul li a {
   text-align: justify;
   padding: 16px;
   margin: 16px;
-}
-.centro__carrusel {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  justify-content: stretch;
-}
-.centro__carrusel__elemento {
-  flex: 1 0 auto;
-  margin: 0;
-  background-color: aliceblue;
-  width: 700px;
-  height: 400px;
 }
 .centro__about {
   display: flex;
