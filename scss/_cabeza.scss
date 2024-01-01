@@ -5,7 +5,7 @@
         @include display-align-justify;
 
         &__image {
-            @include width-height;
+            @include w-h (10%, 10%);
         }
 
         &__title {

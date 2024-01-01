@@ -9,7 +9,7 @@
         @include display-align-justify;
 
         &__item {
-            @include width-height;
+            @include w-h (50%, 50%);
             text-align: right;
         }
     }

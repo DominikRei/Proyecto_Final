@@ -1,31 +1,31 @@
 /*Media Queries de Desktop a Mobile*/
 /*Medida minimo-maximo especifico */
 /*Desktop*/
-@media (max-width: 1020px) and (min-width: 768px) {
+@media (max-width: 1020px) and (min-width: 991px) {
 
 }
-/*Tablet*/
-@media (max-width: 767px) and (min-width: 420px){
+/* Tablet2*/
+@media (max-width: 990px) and (min-width: 768px) {
     * {
         font-family:'Edu+TAS+Beginner', serif;
-        font-size: 16px;
+        font-size: 18px;
         padding: 0;
         margin: 0;
         width: auto;
         height: auto;
     }
     .primaria {
-        background: rgb(63,94,251);
-        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(158,82,179,1) 50%, rgba(252,70,107,1) 100%);
+        background: rgb(86,121,9);
+        background: linear-gradient(90deg, rgba(86,121,9,0.6418942577030813) 0%, rgba(165,44,166,0.7371323529411764) 37%, rgba(0,212,255,0.4766281512605042) 68%, rgba(86,121,9,0.7147233893557423) 100%);
     }
     /* Grilla */
     .grid_container {
-        grid-template-columns:20px 560px 20px;
-        grid-template-rows:auto auto auto ;
+        grid-template-columns:768px;
+        grid-template-rows: auto;
         grid-template-areas: 
-        " header header header"
-        " main main main"   
-        "footer footer footer";
+        " header"
+        " main"   
+        "footer";
     }
     .inicio {
         grid-area: header;
@@ -35,11 +35,12 @@
             width: 100%;
 
             &__imagen {
-                @include w-h (100px, 100px)
+                @include w-h (10%, 10%);
             }
             &__title {
                 @include text-font-family;
-                font-size: 3em;
+                font-size: 35px;
+                @include p-m (5px, 5px);
             }
         }   
         &__navegacion {
@@ -64,13 +65,13 @@
 
         &__subtitle {
             @include text-font-family;
-            font-size: 2em;
-            @include p-m (12px, 12px);
+            font-size: 30px;
+            @include p-m (5px, 5px);
         }
         &__subtitle2 {
             @include text-font-family;
-            font-size: 2em;
-            @include p-m (12px, 12px);
+            font-size: 25px;
+            @include p-m (5px, 5px);
         }
         &__descripcion {
             @include display-align-justify-width;
@@ -78,15 +79,15 @@
             &__video{
                 background-size: center;
                 @include w-h (100%, 100%);
-                @include p-m (10px, 10px);
+                @include p-m (5px, 0px);
             }
             &__media {
-                @include p-m (12px, 12px);
+                @include p-m (5px, 0px);
                 @include w-h (100%,400px );
             }
             &__text {
                 text-align: justify;
-                @include p-m (10px, 10px);
+                @include p-m (5px, 0px);
                 @include w-h (100%, 100%);
             }
         }
@@ -111,7 +112,7 @@
             }
             &__text {
                 text-align: justify;
-                @include p-m (12px, 12px);
+                @include p-m (5px, 5px);
             }
         }
     }
@@ -126,12 +127,145 @@
         &__2 {
             @include display-align-justify;
             width: 100%;
-            @include p-m (12px, 12px);
+            @include p-m (5px, 0px);
 
             &__item {
-                @include w-h (100px, 100px);
+                @include w-h (35%, 35%);
                 text-align: right;
-                margin-right: 15px;
+                margin-right: 5px;
+            }
+        }  
+    } 
+}
+/*Tablet*/
+@media (max-width: 767px) and (min-width: 420px){
+    * {
+        font-family:'Edu+TAS+Beginner', serif;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    .primaria {
+        background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(158,82,179,1) 50%, rgba(252,70,107,1) 100%);
+    }
+    /* Grilla */
+    .grid_container {
+        grid-template-columns:418px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        " header"
+        " main"   
+        "footer";
+    }
+    .inicio {
+        grid-area: header;
+
+        &__2 {
+            @include display-align-justify;
+            width: 100%;
+
+            &__imagen {
+                @include w-h (10%, 10%);
+            }
+            &__title {
+                @include text-font-family;
+                font-size: 30px;
+                @include p-m (5px, 5px);
+            }
+        }   
+        &__navegacion {
+            @include text-font-family;
+            font-size: 1em;            
+        }
+    }
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+        @include p-m (12px, 12px);
+        font-weight: 900;
+        font-size: 1em;
+    }
+    ul li a { 
+        text-decoration: none; 
+    }
+
+    .centro {
+        grid-area: main;
+
+        &__subtitle {
+            @include text-font-family;
+            font-size: 25px;
+            @include p-m (5px, 5px);
+        }
+        &__subtitle2 {
+            @include text-font-family;
+            font-size: 20px;
+            @include p-m (5px, 5px);
+        }
+        &__descripcion {
+            @include display-align-justify-width;
+
+            &__video{
+                background-size: center;
+                @include w-h (100%, 100%);
+                @include p-m (5px, 0px);
+            }
+            &__media {
+                @include p-m (5px, 0px);
+                @include w-h (100%,400px );
+            }
+            &__text {
+                text-align: justify;
+                @include p-m (5px, 0px);
+                @include w-h (100%, 100%);
+            }
+        }
+        &__carrusel {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: scroll;
+            justify-content: stretch;
+
+            &__elemento {
+                flex: 1 0 auto;
+                margin: 20px;
+                background-color: aliceblue;
+                @include w-h ( 480px, 100%);
+            }
+        }
+        &__about {
+            @include display-align-justify-width;
+
+            &__media {
+                @include w-h (100%, 100%);
+            }
+            &__text {
+                text-align: justify;
+                @include p-m (5px, 5px);
+            }
+        }
+    }
+
+    .pie {
+        grid-area: footer;
+
+        &__navegacion2 {
+            @include text-font-family;
+            font-size: 12px;
+        }
+        &__2 {
+            @include display-align-justify;
+            width: 100%;
+            @include p-m (5px, 0px);
+
+            &__item {
+                @include w-h (35%, 35%);
+                text-align: right;
+                margin-right: 5px;
             }
         }  
     } 
@@ -152,12 +286,12 @@
     }
     /* Grilla */
     .grid_container {
-        grid-template-columns: 5px 350px 5px ;
-        grid-template-rows:auto auto auto ;
+        grid-template-columns:318px;
+        grid-template-rows:auto;
         grid-template-areas: 
-        "header header header"
-        "main main main"   
-        "footer footer footer";
+        "header"
+        "main"   
+        "footer";
     }
     .inicio {
         grid-area: header;
@@ -167,11 +301,12 @@
             
 
             &__imagen {
-                @include w-h (40px, 40px);
+                @include w-h (10%, 10%);
             }
             &__title {
                 @include text-font-family;
-                font-size: 3em;
+                font-size: 25px;
+                @include p-m (5px, 5px);
             }
         }
         &__navegacion {
@@ -196,13 +331,13 @@
 
         &__subtitle {
             @include text-font-family;
-            font-size: 2em;
-            @include p-m (10px, 10px);
+            font-size: 20px;
+            @include p-m (5px, 5px);
         }
         &__subtitle2 {
             @include text-font-family;
-            font-size: 20px;
-            @include p-m (10px, 10px);
+            font-size: 18px;
+            @include p-m (5px, 5px);
         }
         &__descripcion {
             @include display-align-justify-width;
@@ -210,15 +345,15 @@
             &__video{
                 background-size: center;
                 @include w-h (100%, 100%);
-                @include p-m (10px, 10px);
+                @include p-m (5px, 0px);
             }
             &__media {
-                @include p-m (12px, 12px);
+                @include p-m (5px, 0px);
                 @include w-h (100%,400px );
             }
             &__text {
                 text-align: justify;
-                @include p-m (10px, 10px);
+                @include p-m (5px, 0px);
                 @include w-h (100%, 100%);
             }
         }
@@ -243,7 +378,7 @@
             }
             &__text {
                 text-align: justify;
-                @include p-m (10px, 10px);
+                @include p-m (5px, 5px);
             }
         }
     }
@@ -254,12 +389,12 @@
         &__2 {
             @include display-align-justify;
             width: 100%;
-            @include p-m (12px, 12px);
+            @include p-m (5px, 0px);
 
             &__item {
-                @include w-h (100px, 100px);
+                @include w-h (35%, 35%);
                 text-align: right;
-                margin-right: 15px;
+                margin-right: 5px;
             }
         }
         &__navegacion2 {
