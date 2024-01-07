@@ -1,15 +1,14 @@
 .centro {
-    grid-area: main;
-
+    
     &__subtitle {
         @include text-font-family;
         font-size: 2em;
-        @include p-m (16px, 16px);
+        @include p-m (16px, 8px);
     }
     &__subtitle2 {
         @include text-font-family;
         font-size: 34px;
-        @include p-m (16px, 16px);
+        @include p-m (16px, 8px);
     }
     &__descripcion {
         @include display-align-justify;
@@ -18,7 +17,7 @@
             background-size: center;
             width: 100%;
             height: 520px;
-            margin: 2px;
+            margin: 0px;
         }
 
         &__text {
@@ -26,13 +25,13 @@
 
             &__p {
                 text-align: justify;
-                @include p-m (16px, 16px);
+                @include p-m (16px, 8px);
                 background-color: #ffffff4d
             }
         }
         &__media {
             text-align: justify;
-            @include p-m (16px, 16px)
+            @include p-m (16px, 8px)
         }
     }
     // &__carrusel {
@@ -54,7 +53,7 @@
 
         &__text {
             text-align: justify;
-            @include p-m (16px, 16px);
+            @include p-m (16px, 8px);
             background-color: #ffffff4d
         }
     }

@@ -1,11 +1,45 @@
 /*Media Queries de Desktop a Mobile*/
 /*Medida minimo-maximo especifico */
 /*Desktop*/
-@media (max-width: 1020px) and (min-width: 991px) {
-
+@media (max-width: 1920px) and (min-width: 1481px) {
+    .centro {
+        &__descripcion {
+            
+            &__elementos {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            &__video {
+                &__2 {
+                    background-size: center;
+                    @include w-h (100%, 480px);
+                    @include p-m (2px, 0px);
+                }
+            }
+        }
+    }
+}
+/*Desktop*/
+@media (max-width: 1480px) and (min-width: 1201px) {
+    .centro {
+        &__descripcion {
+            
+            &__elementos {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            &__video {
+                &__2 {
+                    background-size: center;
+                    @include w-h (100%, 320px);
+                    @include p-m (2px, 0px);
+                }
+            }
+        }
+    }
 }
 /* Tablet2*/
-@media (max-width: 990px) and (min-width: 768px) {
+@media (max-width: 1200px) and (min-width: 768px) {
     * {
         font-family:'Edu+TAS+Beginner', serif;
         font-size: 18px;
@@ -18,18 +52,8 @@
         background: rgb(86,121,9);
         background: linear-gradient(90deg, rgba(86,121,9,0.6418942577030813) 0%, rgba(165,44,166,0.7371323529411764) 37%, rgba(0,212,255,0.4766281512605042) 68%, rgba(86,121,9,0.7147233893557423) 100%);
     }
-    /* Grilla */
-    .grid_container {
-        grid-template-columns:768px;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        " header"
-        " main"   
-        "footer";
-    }
     .inicio {
-        grid-area: header;
-
+        
         &__2 {
             @include display-align-justify;
             width: 100%;
@@ -39,7 +63,7 @@
             }
             &__title {
                 @include text-font-family;
-                font-size: 35px;
+                font-size: 3em;
                 @include p-m (5px, 5px);
             }
         }   
@@ -61,11 +85,10 @@
     }
 
     .centro {
-        grid-area: main;
-
+        
         &__subtitle {
             @include text-font-family;
-            font-size: 30px;
+            font-size: 2em;
             @include p-m (5px, 5px);
         }
         &__subtitle2 {
@@ -76,14 +99,25 @@
         &__descripcion {
             @include display-align-justify-width;
 
+            &__elementos {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
             &__video{
                 background-size: center;
-                @include w-h (100%, 100%);
-                @include p-m (5px, 0px);
+                @include w-h (100%, 320px);
+                @include p-m (0px, 0px);
+
+                &__2 {
+                    background-size: center;
+                    @include w-h (100%, 240px);
+                    @include p-m (5px, 0px);
+                }
             }
             &__media {
-                @include p-m (5px, 0px);
-                @include w-h (100%,400px );
+                @include p-m (0px, 0px);
+                @include w-h (100%,100% );
             }
             &__text {
                 text-align: justify;
@@ -118,8 +152,7 @@
     }
 
     .pie {
-        grid-area: footer;
-
+        
         &__navegacion2 {
             @include text-font-family;
             font-size: 12px;
@@ -150,19 +183,9 @@
     .primaria {
         background: rgb(63,94,251);
         background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(158,82,179,1) 50%, rgba(252,70,107,1) 100%);
-    }
-    /* Grilla */
-    .grid_container {
-        grid-template-columns:418px;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        " header"
-        " main"   
-        "footer";
-    }
+    }    
     .inicio {
-        grid-area: header;
-
+        
         &__2 {
             @include display-align-justify;
             width: 100%;
@@ -172,7 +195,7 @@
             }
             &__title {
                 @include text-font-family;
-                font-size: 30px;
+                font-size: 2em;
                 @include p-m (5px, 5px);
             }
         }   
@@ -194,16 +217,15 @@
     }
 
     .centro {
-        grid-area: main;
-
+        
         &__subtitle {
             @include text-font-family;
-            font-size: 25px;
+            font-size: 28px;
             @include p-m (5px, 5px);
         }
         &__subtitle2 {
             @include text-font-family;
-            font-size: 20px;
+            font-size: 25px;
             @include p-m (5px, 5px);
         }
         &__descripcion {
@@ -211,8 +233,14 @@
 
             &__video{
                 background-size: center;
-                @include w-h (100%, 100%);
+                @include w-h (100%, 320px);
                 @include p-m (5px, 0px);
+
+                &__2 {
+                    background-size: center;
+                    @include w-h (100%, 320px);
+                    @include p-m (5px, 0px);
+                }
             }
             &__media {
                 @include p-m (5px, 0px);
@@ -251,8 +279,7 @@
     }
 
     .pie {
-        grid-area: footer;
-
+        
         &__navegacion2 {
             @include text-font-family;
             font-size: 12px;
@@ -284,18 +311,8 @@
         background: rgb(34,193,195);
         background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(188,122,190,1) 49%, rgba(253,45,175,0.3337710084033614) 100%);
     }
-    /* Grilla */
-    .grid_container {
-        grid-template-columns:318px;
-        grid-template-rows:auto;
-        grid-template-areas: 
-        "header"
-        "main"   
-        "footer";
-    }
     .inicio {
-        grid-area: header;
-
+        
         &__2 {
             @include display-align-justify;
             
@@ -305,13 +322,13 @@
             }
             &__title {
                 @include text-font-family;
-                font-size: 25px;
+                font-size: 2em;
                 @include p-m (5px, 5px);
             }
         }
         &__navegacion {
             @include text-font-family;
-            font-size: 1em;           
+            font-size: 30px;           
         }
     }
     
@@ -327,16 +344,15 @@
     }
 
     .centro {
-        grid-area: main;
-
+        
         &__subtitle {
             @include text-font-family;
-            font-size: 20px;
+            font-size: 27px;
             @include p-m (5px, 5px);
         }
         &__subtitle2 {
             @include text-font-family;
-            font-size: 18px;
+            font-size: 25px;
             @include p-m (5px, 5px);
         }
         &__descripcion {
@@ -344,8 +360,14 @@
 
             &__video{
                 background-size: center;
-                @include w-h (100%, 100%);
+                @include w-h (100%, 320px);
                 @include p-m (5px, 0px);
+
+                &__2 {
+                    background-size: center;
+                    @include w-h (100%, 320px);
+                    @include p-m (5px, 0px);
+                }
             }
             &__media {
                 @include p-m (5px, 0px);
@@ -384,8 +406,7 @@
     }
     
     .pie {
-        grid-area: footer;
-
+        
         &__2 {
             @include display-align-justify;
             width: 100%;
